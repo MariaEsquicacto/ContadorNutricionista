@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calendario.css">
     <title>Calendário</title>
 </head>
 <body>
@@ -14,34 +14,49 @@
     <header></header>
 
     <main>
-        <div class="containercalendario">
-            <div class="calendario">
-              <div class="mes">
-                <i class="fas fa-angle-left prev"></i>
-                <div class="dia-atual">
-                  <h1></h1>
-                  <p></p>
-                </div>
-                 <i class="fas fa-angle-right next"></i>
-              </div>
-    
-              <div class="dias-semana">
-                <div>D</div>
-                <div>S</div>
-                <div>T</div>
-                <div>Q</div>
-                <div>Q</div>
-                <div>S</div>
-                <div>S</div>
-                
-              </div>
-              <div class="dias"></div>
-            </div>
-          </div>
+      <!-- <section id="section_form">
+        <div id="logo_formulario">
+            <img src="../assets/DevTheBlaze.png" alt="Logo DevTheBlaze">
+        </div> -->
+
+      <div class="calendar-container">
+        <div class="calendar-header">
+            <button id="prev-month">❮</button>
+            <div class="month">Outubro 2024</div>
+            <button id="next-month">❯</button>
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>Dom</th>
+                    <th>Seg</th>
+                    <th>Ter</th>
+                    <th>Qua</th>
+                    <th>Qui</th>
+                    <th>Sex</th>
+                    <th>Sáb</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        
+    </div>
+    <div class="selected-date-container">
+      <p id="selected-date-message"></p>
+      <div class="botoes">
+      <button  id="btn-contagem" onclick="toggleContagem()" style="display: none;">Contagem</button>
+      <button  id="btn-relatorio" onclick="toggleRelatorio()" style="display: none;">Relatório</button>
+      </div>
+    </div>
+
+
+    <div id="view-semanal" style="display: none;"></div>
+    <div id="view-mensal" style="display: flex;"></div>
+
     </main>
-
-    <footer></footer>
-
-    <script type="text/javascript" src="../script.js"></script>
+        
+    <script src="../script.js"></script>
 </body>
 </html>
