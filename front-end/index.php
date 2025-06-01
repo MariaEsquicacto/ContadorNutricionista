@@ -68,41 +68,6 @@ exit;
         <img src="../assets/FundoDasTelas.png" alt="">
     </div>
 
-    <div class="wave-container">
-        <!-- Onda 1 (laranja) -->
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="onda-diagonal" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#FF6B00" d="M0,160 C180,280 360,40 540,160 C720,280 900,40 1080,160 C1260,280 1440,40 1440,160 L1440,320 L0,320 Z">
-            <animate 
-              attributeName="d" 
-              dur="10s" 
-              repeatCount="indefinite"
-              values="
-                M0,160 C180,280 360,40 540,160 C720,280 900,40 1080,160 C1260,280 1440,40 1440,160 L1440,320 L0,320 Z;
-                M0,180 C180,60 360,300 540,180 C720,60 900,300 1080,180 C1260,60 1440,300 1440,180 L1440,320 L0,320 Z;
-                M0,160 C180,280 360,40 540,160 C720,280 900,40 1080,160 C1260,280 1440,40 1440,160 L1440,320 L0,320 Z
-              "
-            />
-          </path>
-        </svg>
-      
-        <!-- Onda 2 (amarelo) -->
-        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="onda-diagonal onda-2" xmlns="http://www.w3.org/2000/svg">
-          <path fill="#FFD700" fill-opacity="0.8" d="M0,180 C480,140 960,200 1440,180 L1440,320 L0,320 Z">
-            <animate 
-              attributeName="d" 
-              dur="8s" 
-              repeatCount="indefinite"
-              values="
-                M0,180 C480,140 960,200 1440,180 L1440,320 L0,320 Z;
-                M0,200 C480,180 960,160 1440,200 L1440,320 L0,320 Z;
-                M0,180 C480,140 960,200 1440,180 L1440,320 L0,320 Z
-              " 
-            />
-          </path>
-        </svg>
-      </div>
-      
-
 
     <header></header>
 
@@ -130,6 +95,12 @@ exit;
             </form>
         </section>
     </main>
+    <section class="onda">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
 
     <footer></footer>
     <?php if ($mensagem): ?>

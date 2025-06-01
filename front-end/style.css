@@ -133,33 +133,72 @@ form a {
     padding: 10px;
 }
 
-.wave-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-  }
+.onda {
+    position: absolute; /* Permite posicionar atrás do conteúdo */
+    top: 0;
+    left: 0;
+    width: 410px;
+    height: 800px;
+    z-index: -1; 
+    transform: rotate(45deg); /* Altere o valor para ajustar o ângulo da diagonal */
+    /* overflow-y: hidden; */
+    pointer-events: none; /* Permite clicar nos elementos à frente */
+}
 
-  svg {
-    display: block;
-  }
-
-  .wave-container svg {
-    width: 800%; /* Aumenta o comprimento da onda horizontalmente */
-    height: auto;
-  }
-
-  .onda-diagonal {
-    transform: rotate(35deg); /* ou 45deg, -30deg etc */
-    transform-origin: top left; /* define o ponto de rotação */
+.onda .wave {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 150%;
-    height: auto;
-    z-index: -1;
-  }
+    width: 200%;
+    height: 350px;
+    background: url(../assets/wavelaranja.png);
+    background-size: 650px 350px;
+}
+
+.onda .wave.wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.onda .wave.wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.onda .wave.wave3{
+    animation: animate 30s linear infinite;
+    z-index: 998;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+
+@keyframes animate{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+@keyframes animate2{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -1000px;
+    }
+}
+
+
 
 
   
